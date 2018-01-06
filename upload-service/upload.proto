@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package upload;
+
+service UploadImages {
+	rpc UpImage(upRequest) returns (upResponse){}
+	rpc GetImage(getRequest) returns (getResponse){}
+}
+
+message upRequest {
+	string path = 2;
+	string description = 3; 
+}
+
+message upResponse {
+	bool created = 1;
+}
+
+message getRequest{
+	int32 id = 1;
+}
+
+message getResponse{
+	
+	int32 id = 1;
+	string url = 2;
+	string description = 3;
+}
+
