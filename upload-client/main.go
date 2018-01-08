@@ -25,7 +25,7 @@ func main() {
 	}
 	log.Printf("Created: %v\n", r.Created)
 
-	get, err := c.GetImage(context.Background(), &pb.GetRequest{Id: 6}) // just testing it :)
+	get, err := c.GetImage(context.Background(), &pb.GetRequest{Id: 1}) // just testing it :)
 	if err != nil {
 		panic(err)
 	}
